@@ -10,8 +10,8 @@ window.SCALA_CATALOG = Object.freeze({
         id: 'scalito-amigos',
         title: 'Scalito y sus amigos',
         description: 'Pequeñas aventuras para crecer con fe, amistad y alegría.',
-        cover: 'scalito-amigos',
-        coverAlt: 'Scalito y sus amigos reunidos alrededor de un libro de cuentos en un jardín.',
+        cover: 'scalito-amigos-v2',
+        coverAlt: 'Scalito de pie con sus cuatro amigos en una luminosa sala de lectura.',
         theme: 'scalito',
         products: Object.freeze([
           Object.freeze({
