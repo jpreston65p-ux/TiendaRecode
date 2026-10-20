@@ -10,6 +10,8 @@ En **Cuentos y libros** hay tres colecciones:
 
 **Música y alabanzas** incluye **Melodías para Dormir, Aprender y Amar a Dios**.
 
+**Pack Scalito Aventuras** conserva su tarjeta grande como producto destacado (`featured: true`). Los diez productos anteriores se muestran en tarjetas pequeñas, en una cuadrícula de tres columnas en escritorio, dos en pantallas medianas y una en móviles estrechos. Las portadas compactas conservan su encuadre y usan una variante de 400 píxeles cuando corresponde.
+
 Se recuperaron diez productos de la tienda anterior, con sus portadas, descripciones, precios y ocho enlaces de compra originales. La Biblia y Melodías conservan el aviso de compra próxima porque no tenían enlace. Los importes anteriores mantienen el símbolo `$`, sin convertirlos a bolivianos ni atribuirles una moneda que el original no especificaba. El detalle de la recuperación está en [docs/catalogo-recuperado.md](docs/catalogo-recuperado.md).
 
 Para habilitar la compra del pack, editar `purchaseUrl` en `assets/catalog.js` y reemplazar `null` por el enlace HTTPS oficial entre comillas. La tarjeta se convierte automáticamente en un enlace de compra. Mientras tanto, el botón permanece desactivado y comunica que la compra estará disponible pronto.

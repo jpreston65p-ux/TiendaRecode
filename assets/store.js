@@ -36,7 +36,7 @@
     return icon;
   }
 
-  function cover(item, className) {
+  function cover(item, className, compact = false) {
     const image = node('img', className);
     image.alt = item.coverAlt;
     image.width = item.coverWidth || 800;
@@ -44,10 +44,10 @@
     image.loading = 'lazy';
     image.decoding = 'async';
     image.srcset = `assets/covers/${item.cover}-400.webp 400w, assets/covers/${item.cover}-800.webp 800w`;
-    image.sizes = className === 'product-cover'
+    image.sizes = compact ? '11.5rem' : className === 'product-cover'
       ? '(max-width: 600px) 80vw, 360px'
       : '(max-width: 620px) 80vw, (max-width: 900px) 42vw, 350px';
-    image.src = `assets/covers/${item.cover}-800.webp`;
+    image.src = `assets/covers/${item.cover}-${compact ? 400 : 800}.webp`;
     return image;
   }
 
@@ -74,9 +74,10 @@
   }
 
   function productCard(product, categoryTitle, headingTag = 'h4') {
-    const article = node('article', 'product-card');
+    const featured = product.featured === true;
+    const article = node('article', `product-card ${featured ? 'product-card-featured' : 'product-card-compact'}`);
     const art = node('div', 'product-art');
-    art.append(cover(product, 'product-cover'));
+    art.append(cover(product, 'product-cover', !featured));
     const copy = node('div', 'product-copy');
     copy.append(node('span', 'collection-eyebrow', categoryTitle));
     const heading = node(headingTag, 'product-title', product.title);

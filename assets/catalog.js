@@ -17,6 +17,7 @@ window.SCALA_CATALOG = Object.freeze({
         "products": Object.freeze([
           Object.freeze({
             "id": "pack-scalito-aventuras",
+            "featured": true,
             "title": "Pack Scalito Aventuras",
             "description": "Acompaña a Scalito en una nueva aventura para compartir en familia.",
             "cover": "pack-scalito-aventuras",
