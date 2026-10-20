@@ -18,6 +18,8 @@ Para habilitar la compra del pack, editar `purchaseUrl` en `assets/catalog.js` y
 
 El banner conserva su ilustración y tiene variantes WebP de 768, 1280 y 2048 píxeles. Su precarga usa el mismo `srcset` que la imagen para descargar solo el tamaño elegido por el navegador. El PNG original queda conservado como fuente. Las ilustraciones de la interfaz y las tipografías se sirven como archivos independientes para reducir el HTML y permitir la caché. Las portadas se solicitan al abrir el catálogo, con tamaños adaptables y carga diferida.
 
-Las tipografías Fredoka y Nunito se distribuyen bajo sus licencias originales, incluidas en `assets/fonts/OFL.txt`.
+Los títulos usan **Baloo 2**, con pesos de 600 a 800, y las descripciones conservan **Nunito**. La variante latina de Baloo 2 se sirve desde `assets/fonts/baloo2-latin-wght.woff2`, con precarga y `font-display: swap`; incluye los caracteres del español. La página no solicita fuentes a servicios externos. Su licencia está en `assets/fonts/Baloo2-OFL.txt`. Los archivos anteriores de Fredoka y Nunito y sus licencias se conservan en `assets/fonts/`.
+
+Baloo 2 procede del [proyecto de Ek Type](https://github.com/EkType/Baloo2); se conserva sin modificar la [variante WOFF2 latina de Google Fonts](https://fonts.gstatic.com/s/baloo2/v23/wXKrE3kTposypRyd51jcAA.woff2). La bienvenida, las categorías, los tres mensajes de beneficios y el pie de página mantienen su contenido original con una presentación renovada.
 
 Las portadas están en `assets/covers/`. Las imágenes recuperadas conservan sus proporciones y se sirven en variantes WebP de 400 y 800 píxeles, sin añadir imágenes al inicio de la página. Las instrucciones de creación de las cuatro portadas nuevas se conservan en [docs/portadas.md](docs/portadas.md).
