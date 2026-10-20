@@ -8,7 +8,7 @@
 <title>Tienda SCALA Kids</title>
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='11' fill='%23075044'/%3E%3Cpath d='M20 31 8 20C0 11 14 4 20 14 26 4 40 11 32 20Z' fill='%23ffd061'/%3E%3Cpath d='M20 15v11m-5-6h10' stroke='%23075044' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E">
 <link rel="preload" as="image" type="image/webp" href="assets/banner-scala-1280.webp" imagesrcset="assets/banner-scala-768.webp 768w, assets/banner-scala-1280.webp 1280w, assets/banner-scala-2048.webp 2048w" imagesizes="100vw" fetchpriority="high">
-<link rel="stylesheet" href="assets/styles.css?v=productos-compactos-1">
+<link rel="stylesheet" href="assets/styles.css?v=ventanas-vivas-1">
 </head>
 <body>
 <div class="page">
@@ -40,7 +40,13 @@
 
     <section class="catalog" id="catalog" aria-labelledby="catalog-title" hidden>
       <div class="catalog-header">
-        <h2 id="catalog-title" tabindex="-1"></h2>
+        <div class="catalog-heading">
+          <span class="catalog-symbol" aria-hidden="true">
+            <svg class="catalog-symbol-books" viewBox="0 0 24 24"><path d="M12 7v14m0-14C9 4 4 4 2 5v15c3-1 7-1 10 1m0-14c3-3 8-3 10-2v15c-3-1-7-1-10 1"/></svg>
+            <svg class="catalog-symbol-music" viewBox="0 0 24 24"><path d="M9 18V5l12-2v13M9 8l12-2"/><ellipse cx="6" cy="18" rx="3" ry="2"/><ellipse cx="18" cy="16" rx="3" ry="2"/></svg>
+          </span>
+          <div class="catalog-heading-copy"><span class="catalog-kicker">Un mundo por descubrir</span><h2 id="catalog-title" tabindex="-1"></h2></div>
+        </div>
         <button class="close-catalog" id="close-catalog" type="button" aria-label="Cerrar catálogo"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button>
       </div>
       <div class="catalog-empty" id="catalog-empty" hidden>
@@ -100,7 +106,7 @@
   <noscript><p class="noscript">Activa JavaScript para abrir los catálogos de la tienda.</p></noscript>
 </div>
 <script src="assets/catalog.js?v=productos-compactos-1" defer></script>
-<script src="assets/store.js?v=productos-compactos-1" defer></script>
+<script src="assets/store.js?v=ventanas-vivas-1" defer></script>
 
 </body>
 </html>

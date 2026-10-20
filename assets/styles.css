@@ -159,4 +159,56 @@ h2,h3,.category-title{font-family:Fredoka,system-ui,sans-serif;font-weight:700}
 @media(max-width:900px){.product-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.collection-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:1.15rem}.collection-card:last-child{grid-column:1/-1;width:calc(50% - .575rem);justify-self:center}.product-card-featured{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr)}.product-card-featured .product-art{padding:1rem}.product-card-featured .product-copy{padding:1.25rem}.product-card-featured .product-title{font-size:1.9rem}}
 @media(max-width:620px){.collection-grid{grid-template-columns:minmax(0,1fr);max-width:22rem;margin:0 auto;gap:1.35rem}.collection-card:last-child{grid-column:auto;width:100%}.collection-copy{padding:1rem .65rem .7rem}.collection-name{font-size:1.6rem}.collection-summary{font-size:1rem}.product-card-featured{grid-template-columns:minmax(0,1fr);max-width:27rem;margin:0 auto}.product-card-featured .product-art{padding:1.25rem 2rem}.product-card-featured .product-cover{max-width:20rem;margin:auto}.product-card-featured .product-copy{padding:1.5rem}.product-card-featured .product-title{font-size:2rem}.collection-soon{grid-template-columns:minmax(0,1fr);gap:1.75rem;text-align:center}.collection-preview-cover{max-width:13rem;margin:auto}.collection-soon h4{font-size:1.65rem}.catalog-intro{margin:1rem auto 1.3rem;font-size:1rem}}
 @media(max-width:520px){.product-grid{grid-template-columns:minmax(0,1fr);gap:1rem}.product-card-compact{width:100%;max-width:22rem;justify-self:start}.product-card-compact .product-art{height:12rem}.product-card-compact .product-cover{height:10.5rem}}
+/* Catalog window colors and frames; retain the featured and compact layouts. */
+.catalog{--window-accent:#075044;--window-tint:#edf7e8;--window-line:#bdd5b2;isolation:isolate;background:radial-gradient(ellipse at 100% 0,#fff0bf80,transparent 40%),linear-gradient(145deg,#fffef9,#edf5e6);box-shadow:0 5px 0 #e2c684,0 18px 38px #224c291a,inset 0 0 0 2px #fffdf7}
+.catalog::before{content:"";position:absolute;top:0;left:1.5rem;right:1.5rem;height:.3rem;border-radius:0 0 1rem 1rem;background:linear-gradient(90deg,#7eb77e,#f3c75c,#7ebfb7);pointer-events:none}
+.catalog[data-category=music]{--window-accent:#67418a;--window-tint:#f3eafa;--window-line:#d5bce7;background:radial-gradient(ellipse at 100% 0,#f0d9ff90,transparent 45%),linear-gradient(145deg,#fffef9,#f2eafa)}
+.catalog-header{flex-wrap:nowrap;gap:.85rem;padding:.9rem 1rem;border:1px solid var(--window-line);border-bottom-width:3px;border-radius:1.1rem;background:linear-gradient(115deg,#fffefb,var(--window-tint))}
+.catalog-heading{display:flex;align-items:center;gap:.8rem;flex:1 1 0;min-width:0}
+.catalog-heading-copy{min-width:0}
+.catalog-kicker{display:block;margin:0 0 .3rem;color:var(--window-accent);font-size:.6875rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;line-height:1.5}
+.catalog-header h2{color:var(--window-accent)}
+.catalog-symbol{display:grid;place-items:center;flex-shrink:0;width:3.1rem;height:3.1rem;border:1px solid #ffffffbf;border-radius:1rem;background:var(--window-accent);color:#fff7d9;box-shadow:0 4px 0 #23472d18,inset 0 1px 0 #ffffff40;transform:rotate(-5deg)}
+.catalog-symbol svg{width:1.7rem;height:1.7rem;stroke-width:1.8}
+.catalog-symbol-music{display:none}
+.catalog[data-category=music] .catalog-symbol-books{display:none}
+.catalog[data-category=music] .catalog-symbol-music{display:block}
+.close-catalog{border-color:var(--window-line);color:var(--window-accent);box-shadow:0 3px 0 #23472d12;transition:background .18s ease,color .18s ease,transform .18s ease}
+.close-catalog:hover{background:var(--window-accent);color:#fff}
+.category{box-shadow:0 6px 0 #d7b05d,0 14px 26px #7359231c,inset 0 0 0 2px #fffaf0}
+.category-music{border-color:#b98adb;box-shadow:0 6px 0 #b58bd2,0 14px 26px #6549781c,inset 0 0 0 2px #fff5ff}
+.category-music .category-title{color:#60397e;text-shadow:0 1px 0 #ffffffa0}
+.categories .category[aria-expanded=true]{box-shadow:0 0 0 3px #398355,0 6px 0 #d7b05d,0 14px 26px #7359231c,inset 0 0 0 2px #fffaf0}
+.categories .category-music[aria-expanded=true]{box-shadow:0 0 0 3px #9661b5,0 6px 0 #b58bd2,0 14px 26px #6549781c,inset 0 0 0 2px #fff5ff}
+.collection-card{position:relative;background:linear-gradient(180deg,#fffefb,var(--tint));border-color:var(--accent);box-shadow:0 5px 0 var(--tint),0 12px 24px #23472d14,inset 0 0 0 2px #ffffffb3}
+.collection-cover-wrap{box-shadow:0 3px 10px #23472d1f}
+.collection-count{display:inline-flex;align-items:center;gap:.4rem;padding:.22rem .65rem;border:1px solid var(--accent);border-radius:2rem;background:#fffdf8;color:var(--accent);font-size:.75rem;font-weight:700;line-height:1.4}
+.collection-count::before{content:"";width:.4rem;height:.4rem;border-radius:50%;background:var(--accent)}
+.collection-cta{border:0;border-radius:.75rem;padding:.7rem .8rem;background:var(--accent);color:#fffdf8;box-shadow:inset 0 1px 0 #ffffff30}
+.collection-panel,.music-products{--product-accent:var(--window-accent);--product-tint:var(--window-tint);--product-line:var(--window-line)}
+.collection-panel[data-theme=biblia]{--product-accent:#155a78;--product-tint:#eaf4fc;--product-line:#b9d8e5}
+.collection-panel[data-theme=reflexion]{--product-accent:#6b4475;--product-tint:#f6edf6;--product-line:#d9bfdf}
+.collection-heading{padding:1rem 1.15rem;border:1px solid var(--product-line);border-left:.3rem solid var(--product-accent);border-radius:1rem;background:linear-gradient(110deg,#fffefb,var(--product-tint))}
+.collection-heading h3,.collection-panel .collection-eyebrow{color:var(--product-accent)}
+.back-collections{border-color:var(--product-line);color:var(--product-accent);box-shadow:0 3px 0 #23472d0d;transition:background .18s ease,transform .18s ease}
+.back-collections:hover{background:var(--product-tint)}
+.product-card{position:relative;isolation:isolate;border-color:var(--product-line);box-shadow:0 4px 0 #d8d6ba55,0 12px 24px #23472d10;transition:box-shadow .2s ease}
+.product-card::before{content:"";position:absolute;z-index:1;left:0;right:0;top:0;height:.25rem;background:linear-gradient(90deg,var(--product-accent),#f3ca70);pointer-events:none}
+.product-art{background:radial-gradient(ellipse at 20% 10%,#fff0bf90,transparent 65%),linear-gradient(145deg,#fffdf8,var(--product-tint));border-bottom:1px solid var(--product-line)}
+.product-copy{background:linear-gradient(145deg,#fffefb,#fffdf8)}
+.product-copy .product-title,.product-price,.product-copy .collection-eyebrow{color:var(--product-accent)}
+.product-card-featured{border-color:#e4bd65;box-shadow:0 5px 0 #f2d99b80,0 15px 28px #7f663516}
+.product-card-featured::before{height:.4rem;background:linear-gradient(90deg,#d8a52b,#ffe8a8,#d8a52b)}
+.product-card-featured .product-art{border-bottom:0;border-right:1px solid #ead6a6}
+.product-featured-label{display:inline-flex;align-items:center;align-self:flex-start;padding:.35rem .8rem;margin-bottom:.7rem;border:1px solid #fff2bd;border-radius:2rem;background:linear-gradient(135deg,#ffe597,#f6c151);color:#65420c;font-size:.75rem;font-weight:700;line-height:1.4;box-shadow:0 3px 0 #d7a83826}
+.product-featured-label::before{content:"";width:.5rem;height:.5rem;margin-right:.45rem;border-radius:50%;background:#9d670f}
+.product-buy:not(:disabled){border-color:var(--product-accent);background:var(--product-accent);box-shadow:0 4px 0 #1b3f3326,inset 0 1px 0 #ffffff30;transition:transform .18s ease,box-shadow .18s ease}
+.product-buy svg{width:1rem;height:1rem;flex-shrink:0;transition:transform .18s ease}
+.collection-cta svg{transition:transform .18s ease}
+.product-buy:disabled{box-shadow:inset 0 1px 0 #ffffff80}
+.collection-panel:not([hidden]),#book-collections:not([hidden]),.music-products:not([hidden]){animation:catalog-arrive .28s ease both}
+@keyframes catalog-arrive{from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:translateY(0)}}
+@media(hover:hover) and (pointer:fine){.category:hover{box-shadow:0 6px 0 #d7b05d,0 18px 30px #73592329,inset 0 0 0 2px #fffaf0}.category-music:hover{box-shadow:0 6px 0 #b58bd2,0 18px 30px #65497829,inset 0 0 0 2px #fff5ff}.collection-card:hover{box-shadow:0 6px 0 var(--tint),0 18px 28px #23472d26}.collection-card:hover .collection-cta svg,.product-buy:hover svg{transform:translateX(3px)}.product-card:hover{box-shadow:0 5px 0 #d8d6ba66,0 17px 30px #23472d1c}.product-buy:not(:disabled):hover,.back-collections:hover{transform:translateY(-2px)}.close-catalog:hover{transform:rotate(6deg)}}
+@media(hover:none){.category:hover,.collection-card:hover{transform:none}}
+@media(max-width:620px){.catalog-header{padding:.75rem;gap:.6rem}.catalog-heading{gap:.6rem}.catalog-kicker{font-size:.625rem;letter-spacing:.06em}.catalog-symbol{width:2.4rem;height:2.4rem;border-radius:.8rem}.catalog-symbol svg{width:1.4rem;height:1.4rem}.collection-heading{padding:.9rem 1rem}.product-card-featured .product-art{border-right:0;border-bottom:1px solid #ead6a6}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}

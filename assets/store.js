@@ -79,6 +79,7 @@
     const art = node('div', 'product-art');
     art.append(cover(product, 'product-cover', !featured));
     const copy = node('div', 'product-copy');
+    if (featured) copy.append(node('span', 'product-featured-label', 'Pack destacado'));
     copy.append(node('span', 'collection-eyebrow', categoryTitle));
     const heading = node(headingTag, 'product-title', product.title);
     heading.id = `product-${product.id}`;
@@ -96,6 +97,7 @@
       const buy = node('a', 'product-buy', product.purchaseLabel || 'Comprar ahora');
       buy.href = url;
       buy.setAttribute('aria-label', `Comprar ${product.title}`);
+      buy.append(arrow());
       copy.append(buy);
     } else {
       const unavailable = node('button', 'product-buy', 'Compra disponible pronto');
@@ -163,6 +165,8 @@
       const art = node('span', 'collection-cover-wrap');
       art.append(cover(collection, 'collection-cover'));
       const copy = node('span', 'collection-copy');
+      const count = collection.products.length;
+      copy.append(node('span', 'collection-count', count ? `${count} ${count === 1 ? 'producto' : 'productos'}` : 'Próximamente'));
       copy.append(node('span', 'collection-name', collection.title));
       copy.append(node('span', 'collection-summary', collection.description));
       const cta = node('span', 'collection-cta', 'Explorar colección');
