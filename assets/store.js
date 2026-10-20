@@ -43,11 +43,12 @@
     image.height = item.coverHeight || 1200;
     image.loading = 'lazy';
     image.decoding = 'async';
-    image.srcset = `assets/covers/${item.cover}-400.webp 400w, assets/covers/${item.cover}-800.webp 800w`;
-    image.sizes = compact ? '(max-width: 520px) 7rem, 8rem' : className === 'product-cover'
+    const extension = item.coverFormat === 'jpg' ? 'jpg' : 'webp';
+    image.srcset = `assets/covers/${item.cover}-400.${extension} 400w, assets/covers/${item.cover}-800.${extension} 800w`;
+    image.sizes = compact ? '(max-width: 520px) calc(100vw - 6rem), (max-width: 900px) 40vw, 340px' : className === 'product-cover'
       ? '(max-width: 600px) 80vw, 360px'
       : '(max-width: 620px) 80vw, (max-width: 900px) 42vw, 350px';
-    image.src = `assets/covers/${item.cover}-${compact ? 400 : 800}.webp`;
+    image.src = `assets/covers/${item.cover}-${compact ? 400 : 800}.${extension}`;
     return image;
   }
 
