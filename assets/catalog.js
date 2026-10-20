@@ -35,12 +35,12 @@ window.SCALA_CATALOG = Object.freeze({
             "description": "Aventuras con Escalito y sus amigos. Historias bíblicas, canciones y actividades.",
             "price": 14.99,
             "purchaseUrl": "https://pay.hotmart.com/A106042445O",
-            "cover": "pack-escalito-horizontal-v3",
-            "coverAlt": "Scalito arrodillado junto a un cofre de actividades, levantando un pequeño cohete.",
+            "cover": "pack-escalito-scalito-original-v4",
+            "coverAlt": "Scalito original guiñando un ojo junto a un cofre de actividades, con un cohete de juguete.",
             "coverWidth": 800,
             "coverHeight": 533,
             "currency": "$",
-            "coverFormat": "jpg"
+            "coverFormat": "webp"
           }),
           Object.freeze({
             "id": "escalito-inventor",
@@ -48,12 +48,12 @@ window.SCALA_CATALOG = Object.freeze({
             "description": "Actividades creativas para imaginar, construir y aprender con Escalito.",
             "price": 9.99,
             "purchaseUrl": "https://pay.hotmart.com/Y106040339H",
-            "cover": "escalito-inventor-horizontal-v3",
-            "coverAlt": "Scalito sentado construyendo un molino de madera en su taller, con ambos zapatos visibles.",
+            "cover": "escalito-inventor-scalito-original-v4",
+            "coverAlt": "Scalito original concentrado, con la boca cerrada, construyendo un molino de madera.",
             "coverWidth": 800,
             "coverHeight": 533,
             "currency": "$",
-            "coverFormat": "jpg"
+            "coverFormat": "webp"
           }),
           Object.freeze({
             "id": "escalito-viaje-en-el-tiempo",
@@ -61,12 +61,12 @@ window.SCALA_CATALOG = Object.freeze({
             "description": "Una aventura educativa donde Escalito viaja por distintas épocas aprendiendo valores y lecciones importantes.",
             "price": 9.99,
             "purchaseUrl": "https://pay.hotmart.com/R106037996Q",
-            "cover": "escalito-viaje-en-el-tiempo-horizontal-v3",
-            "coverAlt": "Scalito corriendo de lado a través de un portal de engranajes y mirando atrás con sorpresa.",
+            "cover": "escalito-viaje-en-el-tiempo-scalito-original-v4",
+            "coverAlt": "Scalito original sorprendido, con la boca en forma de O, saliendo de un portal.",
             "coverWidth": 800,
             "coverHeight": 533,
             "currency": "$",
-            "coverFormat": "jpg"
+            "coverFormat": "webp"
           }),
           Object.freeze({
             "id": "escalito-y-el-versiculo-del-dia",
@@ -74,12 +74,12 @@ window.SCALA_CATALOG = Object.freeze({
             "description": "Versículos bíblicos explicados de forma sencilla para que los niños aprendan cada día.",
             "price": 7.99,
             "purchaseUrl": "https://pay.hotmart.com/C106028090T",
-            "cover": "escalito-y-el-versiculo-del-dia-horizontal-v3",
-            "coverAlt": "Scalito tumbado leyendo en una alfombra, con ambos zapatos levantados y el cuerpo completo.",
+            "cover": "escalito-y-el-versiculo-del-dia-scalito-original-v4",
+            "coverAlt": "Scalito original tumbado leyendo con una sonrisa tranquila y la boca cerrada.",
             "coverWidth": 800,
             "coverHeight": 533,
             "currency": "$",
-            "coverFormat": "jpg"
+            "coverFormat": "webp"
           }),
           Object.freeze({
             "id": "escalito-y-la-palabra-de-dios",
@@ -87,12 +87,12 @@ window.SCALA_CATALOG = Object.freeze({
             "description": "Material cristiano infantil para conocer la Biblia de manera divertida, clara y edificante.",
             "price": 7.99,
             "purchaseUrl": "https://pay.hotmart.com/G106026266G",
-            "cover": "escalito-y-la-palabra-de-dios-horizontal-v3",
-            "coverAlt": "Scalito sentado con las piernas cruzadas descubriendo un libro desplegable.",
+            "cover": "escalito-y-la-palabra-de-dios-scalito-original-v4",
+            "coverAlt": "Scalito original asombrado al descubrir una paloma en un libro desplegable.",
             "coverWidth": 800,
             "coverHeight": 533,
             "currency": "$",
-            "coverFormat": "jpg"
+            "coverFormat": "webp"
           }),
           Object.freeze({
             "id": "escalito-y-las-aventuras-de-la-fe",
@@ -100,12 +100,12 @@ window.SCALA_CATALOG = Object.freeze({
             "description": "Historias llenas de fe, amistad y enseñanzas cristianas para niños.",
             "price": 15.99,
             "purchaseUrl": "https://pay.hotmart.com/J106021927B",
-            "cover": "escalito-y-las-aventuras-de-la-fe-horizontal-v3",
-            "coverAlt": "Scalito arrodillado ayudando a un corderito junto a un arroyo.",
+            "cover": "escalito-y-las-aventuras-de-la-fe-scalito-original-v4",
+            "coverAlt": "Scalito original cuidando a un corderito con expresión protectora.",
             "coverWidth": 800,
             "coverHeight": 533,
             "currency": "$",
-            "coverFormat": "jpg"
+            "coverFormat": "webp"
           }),
           Object.freeze({
             "id": "escalito-y-sus-retos-biblicos",
@@ -113,12 +113,12 @@ window.SCALA_CATALOG = Object.freeze({
             "description": "Sopas de letras, crucigramas, acertijos y desafíos bíblicos para aprender jugando.",
             "price": 4.99,
             "purchaseUrl": "https://pay.hotmart.com/N106036870W",
-            "cover": "escalito-y-sus-retos-biblicos-horizontal-v3",
-            "coverAlt": "Scalito resolviendo un laberinto con una lupa en una sala de juegos.",
+            "cover": "escalito-y-sus-retos-biblicos-scalito-original-v4",
+            "coverAlt": "Scalito original resolviendo un laberinto, con una ceja levantada y gesto ingenioso.",
             "coverWidth": 800,
             "coverHeight": 533,
             "currency": "$",
-            "coverFormat": "jpg"
+            "coverFormat": "webp"
           })
         ])
       }),
@@ -137,12 +137,12 @@ window.SCALA_CATALOG = Object.freeze({
             "description": "La Biblia adaptada para niños con historias y enseñanzas de Dios de forma sencilla y divertida.",
             "price": 6.99,
             "purchaseUrl": null,
-            "cover": "la-biblia-horizontal-v3",
-            "coverAlt": "Scalito sentado construyendo una pequeña arca de Noé con animales de juguete.",
+            "cover": "la-biblia-scalito-original-v4",
+            "coverAlt": "Scalito original sonriendo con ternura mientras juega con un arca de Noé.",
             "coverWidth": 800,
             "coverHeight": 533,
             "currency": "$",
-            "coverFormat": "jpg"
+            "coverFormat": "webp"
           })
         ]),
         "coverWidth": 800,
@@ -163,12 +163,12 @@ window.SCALA_CATALOG = Object.freeze({
             "description": "VideoCuentos de reflexión con historias bíblicas y valores cristianos para niños.",
             "price": 12,
             "purchaseUrl": "https://pay.hotmart.com/E105042879M",
-            "cover": "videocuento-de-reflexion-horizontal-v3",
-            "coverAlt": "Scalito sentado en un puf mirando un videocuento y sosteniendo un mando.",
+            "cover": "videocuento-de-reflexion-scalito-original-v4",
+            "coverAlt": "Scalito original viendo un videocuento con una expresión emotiva y reflexiva.",
             "coverWidth": 800,
             "coverHeight": 533,
             "currency": "$",
-            "coverFormat": "jpg"
+            "coverFormat": "webp"
           })
         ]),
         "coverWidth": 800,
@@ -186,12 +186,12 @@ window.SCALA_CATALOG = Object.freeze({
         "description": "Melodías y canciones cristianas para dormir, aprender y amar a Dios con ternura y alegría.",
         "price": 8.99,
         "purchaseUrl": null,
-        "cover": "melodias-para-dormir-aprender-y-amar-a-dios-horizontal-v3",
-        "coverAlt": "Scalito sentado tocando un ukelele en un jardín nocturno.",
+        "cover": "melodias-para-dormir-aprender-y-amar-a-dios-scalito-original-v4",
+        "coverAlt": "Scalito original cantando con los ojos cerrados mientras toca un ukelele.",
         "coverWidth": 800,
         "coverHeight": 533,
         "currency": "$",
-        "coverFormat": "jpg"
+        "coverFormat": "webp"
       })
     ])
   })
