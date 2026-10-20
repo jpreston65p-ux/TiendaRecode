@@ -13,6 +13,7 @@
   const panel = document.getElementById('collection-panel');
   const collectionTitle = document.getElementById('collection-title');
   const productGrid = document.getElementById('product-grid');
+  const musicProducts = document.getElementById('music-products');
   const soon = document.getElementById('collection-soon');
   let active = null;
   let opener = null;
@@ -38,8 +39,8 @@
   function cover(item, className) {
     const image = node('img', className);
     image.alt = item.coverAlt;
-    image.width = 800;
-    image.height = 1200;
+    image.width = item.coverWidth || 800;
+    image.height = item.coverHeight || 1200;
     image.loading = 'lazy';
     image.decoding = 'async';
     image.srcset = `assets/covers/${item.cover}-400.webp 400w, assets/covers/${item.cover}-800.webp 800w`;
@@ -72,24 +73,28 @@
     }
   }
 
-  function productCard(product) {
+  function productCard(product, categoryTitle, headingTag = 'h4') {
     const article = node('article', 'product-card');
     const art = node('div', 'product-art');
     art.append(cover(product, 'product-cover'));
     const copy = node('div', 'product-copy');
-    copy.append(node('span', 'collection-eyebrow', 'Scalito y sus amigos'));
-    const heading = node('h4', '', product.title);
+    copy.append(node('span', 'collection-eyebrow', categoryTitle));
+    const heading = node(headingTag, 'product-title', product.title);
     heading.id = `product-${product.id}`;
     article.setAttribute('aria-labelledby', heading.id);
     copy.append(heading, node('p', 'product-description', product.description));
     const price = node('p', 'product-price');
-    price.setAttribute('aria-label', `${product.price} bolivianos`);
-    price.append(node('span', 'price-currency', 'Bs'), node('span', 'price-value', String(product.price)));
-    copy.append(price, node('span', 'price-note', 'Precio en bolivianos'));
+    const bolivianos = product.currency === 'BOB';
+    const amount = bolivianos ? String(product.price) : product.price.toFixed(2);
+    price.setAttribute('aria-label', bolivianos ? `${amount} bolivianos` : `$${amount}`);
+    price.append(node('span', 'price-currency', bolivianos ? 'Bs' : '$'), node('span', 'price-value', amount));
+    copy.append(price);
+    if (bolivianos) copy.append(node('span', 'price-note', 'Precio en bolivianos'));
     const url = purchaseUrl(product.purchaseUrl);
     if (url) {
-      const buy = node('a', 'product-buy', 'Comprar pack');
+      const buy = node('a', 'product-buy', product.purchaseLabel || 'Comprar ahora');
       buy.href = url;
+      buy.setAttribute('aria-label', `Comprar ${product.title}`);
       copy.append(buy);
     } else {
       const unavailable = node('button', 'product-buy', 'Compra disponible pronto');
@@ -113,7 +118,7 @@
     panel.dataset.theme = collection.theme;
     collectionTitle.textContent = collection.title;
     document.getElementById('collection-description').textContent = collection.description;
-    productGrid.replaceChildren(...collection.products.map(productCard));
+    productGrid.replaceChildren(...collection.products.map(product => productCard(product, collection.title)));
     productGrid.hidden = collection.products.length === 0;
     soon.hidden = collection.products.length > 0;
     const preview = document.getElementById('collection-preview');
@@ -125,7 +130,7 @@
     collections.hidden = true;
     panel.hidden = false;
     announcement.textContent = collection.products.length
-      ? `${collection.title}. ${collection.products[0].title}, ${collection.products[0].price} bolivianos. ${purchaseUrl(collection.products[0].purchaseUrl) ? 'Compra disponible.' : 'Compra disponible próximamente.'}`
+      ? `${collection.title}. ${collection.products.length} ${collection.products.length === 1 ? 'producto' : 'productos'}.`
       : `${collection.title}. Nuevas lecturas próximamente.`;
     focusAndReveal(collectionTitle);
   }
@@ -189,12 +194,18 @@
     title.textContent = category.title;
     buttons.forEach(item => item.setAttribute('aria-expanded', String(item === button)));
     panel.hidden = true;
-    empty.hidden = key === 'books';
+    const hasProducts = Boolean(category.products && category.products.length);
+    empty.hidden = key === 'books' || hasProducts;
     collections.hidden = key !== 'books';
+    musicProducts.hidden = key !== 'music' || !hasProducts;
+    musicProducts.replaceChildren();
     if (key === 'books') {
       buildCollections();
       collectionGrid.querySelectorAll('button').forEach(item => item.setAttribute('aria-expanded', 'false'));
       announcement.textContent = 'Cuentos y libros. Tres colecciones disponibles para explorar.';
+    } else if (hasProducts) {
+      musicProducts.append(...category.products.map(product => productCard(product, category.title, 'h3')));
+      announcement.textContent = `${category.title}. ${category.products.length} ${category.products.length === 1 ? 'producto' : 'productos'}.`;
     } else {
       document.getElementById('catalog-description').textContent = category.emptyMessage;
       announcement.textContent = `${category.title}. Nuevos productos próximamente.`;
@@ -210,7 +221,7 @@
   document.addEventListener('keydown', event => {
     if (event.key !== 'Escape' || catalog.hidden) return;
     event.preventDefault();
-    if (!panel.hidden) showCollections();
+    if (active === 'books' && !panel.hidden) showCollections();
     else close();
   });
 })();
