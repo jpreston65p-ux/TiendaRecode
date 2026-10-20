@@ -23,3 +23,5 @@ Los títulos usan **Baloo 2**, con pesos de 600 a 800, y las descripciones conse
 Baloo 2 procede del [proyecto de Ek Type](https://github.com/EkType/Baloo2); se conserva sin modificar la [variante WOFF2 latina de Google Fonts](https://fonts.gstatic.com/s/baloo2/v23/wXKrE3kTposypRyd51jcAA.woff2). La bienvenida, las categorías, los tres mensajes de beneficios y el pie de página mantienen su contenido original con una presentación renovada.
 
 Las portadas están en `assets/covers/`. Las imágenes recuperadas conservan sus proporciones y se sirven en variantes WebP de 400 y 800 píxeles, sin añadir imágenes al inicio de la página. Las instrucciones de creación de las cuatro portadas nuevas se conservan en [docs/portadas.md](docs/portadas.md).
+
+El catálogo actual incorpora trece portadas renovadas con el Scalito actual y muestra todas las ilustraciones completas, sin recortar títulos ni personajes. La portada aprobada de Scalito con sus cuatro amigos se conserva. Las nuevas rutas, referencias y prompts están en [docs/portadas-actuales.md](docs/portadas-actuales.md); los archivos anteriores siguen disponibles como historial.

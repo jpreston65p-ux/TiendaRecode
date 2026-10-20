@@ -44,7 +44,7 @@
     image.loading = 'lazy';
     image.decoding = 'async';
     image.srcset = `assets/covers/${item.cover}-400.webp 400w, assets/covers/${item.cover}-800.webp 800w`;
-    image.sizes = compact ? '11.5rem' : className === 'product-cover'
+    image.sizes = compact ? '(max-width: 520px) 7rem, 8rem' : className === 'product-cover'
       ? '(max-width: 600px) 80vw, 360px'
       : '(max-width: 620px) 80vw, (max-width: 900px) 42vw, 350px';
     image.src = `assets/covers/${item.cover}-${compact ? 400 : 800}.webp`;
