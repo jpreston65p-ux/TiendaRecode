@@ -130,6 +130,11 @@
     if (url) {
       const buy = node('a', 'product-buy', product.purchaseLabel || 'Comprar ahora');
       buy.href = url;
+      // Embedded stores open the external checkout outside the catalog frame.
+      if (window.top && window.top !== window) {
+        buy.target = '_blank';
+        buy.rel = 'noopener noreferrer';
+      }
       buy.setAttribute('aria-label', `Comprar ${product.title}`);
       buy.append(arrow());
       copy.append(buy);
