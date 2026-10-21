@@ -15,6 +15,7 @@
   const productGrid = document.getElementById('product-grid');
   const musicProducts = document.getElementById('music-products');
   const soon = document.getElementById('collection-soon');
+  const collectionCards = new Map();
   let active = null;
   let opener = null;
   let collectionOpener = null;
@@ -63,12 +64,14 @@
     return emblem;
   }
 
-  function cover(item, className, compact = false) {
+  function cover(item, className, compact = false, priority = false) {
     const image = node('img', className);
     image.alt = item.coverAlt;
     image.width = item.coverWidth || 800;
     image.height = item.coverHeight || 1200;
-    image.loading = 'lazy';
+    // Priority applies only after the user opens a category or collection.
+    image.loading = priority ? 'eager' : 'lazy';
+    image.fetchPriority = priority ? 'high' : 'auto';
     image.decoding = 'async';
     const extension = item.coverFormat === 'jpg' ? 'jpg' : 'webp';
     image.srcset = `assets/covers/${item.cover}-400.${extension} 400w, assets/covers/${item.cover}-800.${extension} 800w`;
@@ -101,12 +104,12 @@
     }
   }
 
-  function productCard(product, categoryTitle, headingTag = 'h4') {
+  function productCard(product, categoryTitle, headingTag = 'h4', priority = false) {
     const featured = product.featured === true;
     const article = node('article', `product-card ${featured ? 'product-card-featured' : 'product-card-compact'}`);
     article.dataset.product = product.id;
     const art = node('div', 'product-art');
-    art.append(cover(product, 'product-cover', !featured));
+    art.append(cover(product, 'product-cover', !featured, priority));
     const copy = node('div', 'product-copy');
     if (featured) copy.append(node('span', 'product-featured-label', 'Pack destacado'));
     const storyLabel = node('div', 'product-story-label');
@@ -152,7 +155,14 @@
     panel.dataset.theme = collection.theme;
     collectionTitle.textContent = collection.title;
     document.getElementById('collection-description').textContent = collection.description;
-    productGrid.replaceChildren(...collection.products.map(product => productCard(product, collection.title)));
+    if (!collectionCards.has(collection.id)) {
+      collectionCards.set(collection.id, collection.products.map((product, index) =>
+        productCard(product, collection.title, 'h4', index === 0)));
+    }
+    if (productGrid.dataset.collection !== collection.id) {
+      productGrid.replaceChildren(...collectionCards.get(collection.id));
+      productGrid.dataset.collection = collection.id;
+    }
     productGrid.hidden = collection.products.length === 0;
     soon.hidden = collection.products.length > 0;
     const preview = document.getElementById('collection-preview');
@@ -186,7 +196,7 @@
 
   function buildCollections() {
     if (collectionGrid.children.length) return;
-    data.books.collections.forEach(collection => {
+    data.books.collections.forEach((collection, index) => {
       const button = node('button', 'collection-card');
       button.type = 'button';
       button.dataset.collection = collection.id;
@@ -194,7 +204,7 @@
       button.setAttribute('aria-expanded', 'false');
       button.setAttribute('aria-controls', 'collection-panel');
       const art = node('span', 'collection-cover-wrap');
-      art.append(cover(collection, 'collection-cover'));
+      art.append(cover(collection, 'collection-cover', false, index === 0));
       const copy = node('span', 'collection-copy');
       const count = collection.products.length;
       copy.append(node('span', 'collection-count', count ? `${count} ${count === 1 ? 'producto' : 'productos'}` : 'Próximamente'));
@@ -234,13 +244,15 @@
     empty.hidden = key === 'books' || hasProducts;
     collections.hidden = key !== 'books';
     musicProducts.hidden = key !== 'music' || !hasProducts;
-    musicProducts.replaceChildren();
     if (key === 'books') {
       buildCollections();
       collectionGrid.querySelectorAll('button').forEach(item => item.setAttribute('aria-expanded', 'false'));
       announcement.textContent = 'Cuentos y libros. Tres colecciones disponibles para explorar.';
     } else if (hasProducts) {
-      musicProducts.append(...category.products.map(product => productCard(product, category.title, 'h3')));
+      if (!musicProducts.children.length) {
+        musicProducts.append(...category.products.map((product, index) =>
+          productCard(product, category.title, 'h3', index === 0)));
+      }
       announcement.textContent = `${category.title}. ${category.products.length} ${category.products.length === 1 ? 'producto' : 'productos'}.`;
     } else {
       document.getElementById('catalog-description').textContent = category.emptyMessage;

@@ -41,3 +41,20 @@ Baloo 2 procede del [proyecto de Ek Type](https://github.com/EkType/Baloo2); se 
 Las portadas están en `assets/covers/`. Se cargan de forma diferida al abrir los catálogos, sin añadir solicitudes de portadas al inicio de la página. Se conservan los recursos anteriores y las instrucciones de las primeras ilustraciones en [docs/portadas.md](docs/portadas.md).
 
 Los diez productos anteriores usan portadas **horizontales (3:2)** basadas directamente en la foto original de Scalito, con expresiones diferentes y variantes WebP de 400 y 800 píxeles. Las tarjetas muestran el lienzo completo. El pack nuevo y las tres portadas de colecciones se conservan. La referencia, los archivos y los prompts actuales están en [docs/portadas-scalito-original.md](docs/portadas-scalito-original.md); las versiones anteriores permanecen como historial.
+
+
+## Carga de la tienda
+
+El banner conserva su PNG fuente y las tres variantes WebP de respaldo. Los navegadores compatibles eligen las nuevas variantes AVIF de 768, 1280 o 2048 píxeles mediante `picture`. La precarga AVIF comparte exactamente el `srcset` y el tamaño del banner para no descargar dos versiones.
+
+El atlas `scala-ui.avif` conserva las dimensiones y coordenadas del original, con las 22 regiones que utiliza el CSS y un margen para el escalado. Sus zonas sin uso quedan vacías para reducir la descarga; todos los adornos visibles se conservan. `image-set` elige AVIF cuando está disponible y mantiene `scala-art.webp` como respaldo.
+
+| Banner elegido + atlas de interfaz | WebP anterior | AVIF optimizado | Reducción |
+| --- | ---: | ---: | ---: |
+| 768 píxeles | 343.886 bytes | 107.145 bytes | 69 % |
+| 1280 píxeles | 431.478 bytes | 161.866 bytes | 62 % |
+| 2048 píxeles | 562.960 bytes | 236.598 bytes | 58 % |
+
+La comparación mide el peso de esas dos imágenes, sin contar HTML, estilos, fuentes o JavaScript; no representa un tiempo de carga medido. El banner AVIF se codifica directamente desde `banner-scala.png` con color 4:4:4. Para regenerar estos recursos tras cambiar el banner o las regiones de los sprites, ejecutar opcionalmente `python scripts/optimize-images.py` con Pillow y soporte AVIF. La tienda publicada sigue sin necesitar compilación.
+
+Las portadas no se crean ni se descargan al entrar al inicio: aparecen al abrir el catálogo. En cada categoría o colección, la primera portada tiene prioridad; las siguientes conservan carga diferida. Las tarjetas de libros y música se reutilizan al volver a abrirlas para evitar reconstruir su contenido. Los once productos, los ocho enlaces de compra, los precios, el pack destacado, las tipografías y los marcos se mantienen.

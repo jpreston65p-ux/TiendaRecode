@@ -13,10 +13,11 @@ svg{display:block;fill:none;stroke:currentColor;stroke-width:2.5;stroke-linecap:
 .page{display:flex;flex-direction:column;width:100%;min-height:100vh;margin:0;background:transparent}
 .hero{flex-shrink:0;overflow:hidden;background:#075044;border-bottom:1px solid #dac494}
 .hero-art{position:relative;overflow:hidden;aspect-ratio:2048/760}
+.hero-art picture{display:block}
 .hero-art img{display:block;width:100%;height:auto}
 .store{flex:1;width:min(100% - 4.8rem,73.5rem);margin:0 auto;padding:1.8rem 0 .5rem}
 h1,h2,h3,h4,.category-title{font-family:var(--font-display);font-weight:700}
-.art{display:block;flex-shrink:0;background-image:url('scala-art.webp');background-repeat:no-repeat}
+.art{display:block;flex-shrink:0;background-image:url('scala-art.webp');background-image:image-set(url('scala-ui.avif') type('image/avif'),url('scala-art.webp') type('image/webp'));background-repeat:no-repeat}
 .welcome{text-align:center;margin:0 0 1.2rem}
 .welcome-heading{display:flex;align-items:center;justify-content:center;gap:.3rem;position:relative}
 .welcome h2{margin:0;font-weight:600;font-size:clamp(1.85rem,3.6vw,2.875rem);line-height:1.12;letter-spacing:-.015em;text-wrap:balance;color:#0b4936;text-shadow:0 1px 0 #083f30,0 2px 0 #06352b,0 4px 5px #284a2518}
