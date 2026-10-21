@@ -28,7 +28,7 @@ Se recuperaron diez productos de la tienda anterior, con sus descripciones y och
 | VideoCuento de reflexión | Bs 30 |
 | Melodías para Dormir, Aprender y Amar a Dios | Bs 30 |
 
-Los ocho destinos anteriores de Hotmart todavía muestran importes con `$`. Sus enlaces permanecen guardados, con `checkoutPricePending: true`, y las tarjetas indican «Nuevo precio próximamente». Para reactivar cada compra, configurar una oferta que cobre el importe anunciado, actualizar `purchaseUrl` con su enlace HTTPS y quitar `checkoutPricePending` o cambiarlo a `false`. El cambio de este repositorio no cambia las ofertas de Hotmart. La Biblia, Melodías y el pack nuevo conservan su aviso de compra próxima hasta recibir sus enlaces oficiales.
+Los ocho enlaces originales de Hotmart están activos mediante «Comprar ahora», por indicación del propietario. Se retiraron el aviso «Nuevo precio próximamente» y su mensaje de actualización. Los precios del catálogo permanecen en bolivianos; los importes del proveedor de pagos se administran por separado. La Biblia, Melodías y el pack nuevo conservan su aviso de compra próxima hasta recibir sus enlaces oficiales.
 
 Para habilitar la compra del pack, editar `purchaseUrl` en `assets/catalog.js` y reemplazar `null` por el enlace HTTPS oficial entre comillas. La tarjeta se convierte automáticamente en un enlace de compra. Mientras tanto, el botón permanece desactivado y comunica que la compra estará disponible pronto.
 

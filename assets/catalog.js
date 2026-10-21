@@ -1,7 +1,7 @@
 'use strict';
 
 // Boliviano (BOB) price tiers follow product formats; these are not FX conversions.
-// Original HTTPS checkout destinations are retained for updating their offers.
+// The eight original HTTPS checkout destinations are active.
 // Prices use multiples of Bs 10: individual products Bs 10–30, both packs Bs 40.
 window.SCALA_CATALOG = Object.freeze({
   "books": Object.freeze({
@@ -35,7 +35,6 @@ window.SCALA_CATALOG = Object.freeze({
             "description": "Aventuras con Escalito y sus amigos. Historias bíblicas, canciones y actividades.",
             "price": 40,
             "purchaseUrl": "https://pay.hotmart.com/A106042445O",
-            "checkoutPricePending": true,
             "cover": "pack-escalito-scalito-original-v4",
             "coverAlt": "Scalito original guiñando un ojo junto a un cofre de actividades, con un cohete de juguete.",
             "coverWidth": 800,
@@ -49,7 +48,6 @@ window.SCALA_CATALOG = Object.freeze({
             "description": "Actividades creativas para imaginar, construir y aprender con Escalito.",
             "price": 20,
             "purchaseUrl": "https://pay.hotmart.com/Y106040339H",
-            "checkoutPricePending": true,
             "cover": "escalito-inventor-scalito-original-v4",
             "coverAlt": "Scalito original concentrado, con la boca cerrada, construyendo un molino de madera.",
             "coverWidth": 800,
@@ -63,7 +61,6 @@ window.SCALA_CATALOG = Object.freeze({
             "description": "Una aventura educativa donde Escalito viaja por distintas épocas aprendiendo valores y lecciones importantes.",
             "price": 30,
             "purchaseUrl": "https://pay.hotmart.com/R106037996Q",
-            "checkoutPricePending": true,
             "cover": "escalito-viaje-en-el-tiempo-scalito-original-v4",
             "coverAlt": "Scalito original sorprendido, con la boca en forma de O, saliendo de un portal.",
             "coverWidth": 800,
@@ -77,7 +74,6 @@ window.SCALA_CATALOG = Object.freeze({
             "description": "Versículos bíblicos explicados de forma sencilla para que los niños aprendan cada día.",
             "price": 20,
             "purchaseUrl": "https://pay.hotmart.com/C106028090T",
-            "checkoutPricePending": true,
             "cover": "escalito-y-el-versiculo-del-dia-scalito-original-v4",
             "coverAlt": "Scalito original tumbado leyendo con una sonrisa tranquila y la boca cerrada.",
             "coverWidth": 800,
@@ -91,7 +87,6 @@ window.SCALA_CATALOG = Object.freeze({
             "description": "Material cristiano infantil para conocer la Biblia de manera divertida, clara y edificante.",
             "price": 20,
             "purchaseUrl": "https://pay.hotmart.com/G106026266G",
-            "checkoutPricePending": true,
             "cover": "escalito-y-la-palabra-de-dios-scalito-original-v4",
             "coverAlt": "Scalito original asombrado al descubrir una paloma en un libro desplegable.",
             "coverWidth": 800,
@@ -105,7 +100,6 @@ window.SCALA_CATALOG = Object.freeze({
             "description": "Historias llenas de fe, amistad y enseñanzas cristianas para niños.",
             "price": 30,
             "purchaseUrl": "https://pay.hotmart.com/J106021927B",
-            "checkoutPricePending": true,
             "cover": "escalito-y-las-aventuras-de-la-fe-scalito-original-v4",
             "coverAlt": "Scalito original cuidando a un corderito con expresión protectora.",
             "coverWidth": 800,
@@ -119,7 +113,6 @@ window.SCALA_CATALOG = Object.freeze({
             "description": "Sopas de letras, crucigramas, acertijos y desafíos bíblicos para aprender jugando.",
             "price": 10,
             "purchaseUrl": "https://pay.hotmart.com/N106036870W",
-            "checkoutPricePending": true,
             "cover": "escalito-y-sus-retos-biblicos-scalito-original-v4",
             "coverAlt": "Scalito original resolviendo un laberinto, con una ceja levantada y gesto ingenioso.",
             "coverWidth": 800,
@@ -170,7 +163,6 @@ window.SCALA_CATALOG = Object.freeze({
             "description": "VideoCuentos de reflexión con historias bíblicas y valores cristianos para niños.",
             "price": 30,
             "purchaseUrl": "https://pay.hotmart.com/E105042879M",
-            "checkoutPricePending": true,
             "cover": "videocuento-de-reflexion-scalito-original-v4",
             "coverAlt": "Scalito original viendo un videocuento con una expresión emotiva y reflexiva.",
             "coverWidth": 800,
