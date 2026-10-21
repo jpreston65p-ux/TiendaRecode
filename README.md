@@ -4,7 +4,7 @@ Tienda estática en español, sin dependencias de ejecución ni pasos de compila
 
 En **Cuentos y libros** hay tres colecciones:
 
-- **Scalito y sus amigos**, con **Pack Scalito Aventuras a Bs 40**, el Pack Escalito anterior y seis aventuras y actividades de Escalito.
+- **Scalito y sus amigos**, con **Pack Scalito Aventuras a Bs 39**, el Pack Escalito anterior y seis aventuras y actividades de Escalito.
 - **Historia de la Biblia**, con **La Biblia**.
 - **Reflexión en la vida**, con **VideoCuento de reflexión**.
 
@@ -12,21 +12,21 @@ En **Cuentos y libros** hay tres colecciones:
 
 **Pack Scalito Aventuras** conserva su tarjeta grande como producto destacado (`featured: true`). Los diez productos anteriores se muestran en tarjetas pequeñas, en una cuadrícula de tres columnas en escritorio, dos en pantallas medianas y una en móviles estrechos. Las portadas compactas conservan su encuadre y usan una variante de 400 píxeles cuando corresponde.
 
-Se recuperaron diez productos de la tienda anterior, con sus descripciones y ocho enlaces de compra originales. El registro de los importes originales queda como historial en [docs/catalogo-recuperado.md](docs/catalogo-recuperado.md). Los precios actuales son nuevas tarifas en bolivianos (BOB), solo en múltiplos de Bs 10: los individuales cuestan Bs 10, Bs 20 o Bs 30 y ambos packs cuestan Bs 40. La escala distingue actividades, lecturas, materiales educativos y formatos audiovisuales. Los dos packs comparten nivel y quedan por encima de cualquier producto individual.
+Se recuperaron diez productos de la tienda anterior, con sus descripciones y ocho enlaces de compra originales. El registro de los importes originales queda como historial en [docs/catalogo-recuperado.md](docs/catalogo-recuperado.md). Los precios actuales están en bolivianos (BOB) y terminan en 9: los individuales cuestan Bs 9, Bs 19 o Bs 29 y ambos packs cuestan Bs 39. Cada tarifa se redujo en Bs 1 respecto a la escala anterior. Los dos packs comparten nivel y quedan por encima de cualquier producto individual.
 
 | Producto | Precio actual |
 | --- | --- |
-| Pack Scalito Aventuras | Bs 40 |
-| Pack Escalito | Bs 40 |
-| Escalito Inventor | Bs 20 |
-| Escalito Viaje en el Tiempo | Bs 30 |
-| Escalito y el Versículo del Día | Bs 20 |
-| Escalito y la Palabra de Dios | Bs 20 |
-| Escalito y las Aventuras de la Fe | Bs 30 |
-| Escalito y sus Retos Bíblicos | Bs 10 |
-| La Biblia | Bs 30 |
-| VideoCuento de reflexión | Bs 30 |
-| Melodías para Dormir, Aprender y Amar a Dios | Bs 30 |
+| Pack Scalito Aventuras | Bs 39 |
+| Pack Escalito | Bs 39 |
+| Escalito Inventor | Bs 19 |
+| Escalito Viaje en el Tiempo | Bs 29 |
+| Escalito y el Versículo del Día | Bs 19 |
+| Escalito y la Palabra de Dios | Bs 19 |
+| Escalito y las Aventuras de la Fe | Bs 29 |
+| Escalito y sus Retos Bíblicos | Bs 9 |
+| La Biblia | Bs 29 |
+| VideoCuento de reflexión | Bs 29 |
+| Melodías para Dormir, Aprender y Amar a Dios | Bs 29 |
 
 Los ocho enlaces originales de Hotmart están activos mediante «Comprar ahora», por indicación del propietario. Se retiraron el aviso «Nuevo precio próximamente» y su mensaje de actualización. Los precios del catálogo permanecen en bolivianos; los importes del proveedor de pagos se administran por separado. La Biblia, Melodías y el pack nuevo conservan su aviso de compra próxima hasta recibir sus enlaces oficiales.
 
