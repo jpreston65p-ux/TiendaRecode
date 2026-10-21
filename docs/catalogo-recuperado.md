@@ -21,6 +21,6 @@ Se trasladaron diez productos sin cambiar sus nombres, descripciones, importes n
 
 El HTML anterior solo indicaba `$`, sin código de moneda. Durante la migración se conservó ese símbolo sin realizar una conversión. Los destinos se copiaron literalmente; este registro histórico no describe los importes actuales, impuestos ni disponibilidad en Hotmart.
 
-**Pack Scalito Aventuras** sigue siendo un producto independiente a **Bs 30**, con su portada actual y `purchaseUrl: null` hasta recibir su enlace oficial. No se le asignó el enlace del antiguo Pack Escalito.
+**Pack Scalito Aventuras** se incorporó como producto independiente con un precio inicial de **Bs 30**. Su tarifa actual está en el README y mantiene `purchaseUrl: null` hasta recibir su enlace oficial. No se le asignó el enlace del antiguo Pack Escalito.
 
 La apertura inicial conserva el banner optimizado. Las imágenes de las colecciones se crean al abrir Cuentos y libros; las de cada producto, al entrar en su colección o en Música y alabanzas. Todas usan carga diferida. Los archivos CSS y JavaScript tienen una versión nueva en la URL para actualizar la caché.
