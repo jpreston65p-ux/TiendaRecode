@@ -4,7 +4,7 @@ Tienda estática en español, sin dependencias de ejecución ni pasos de compila
 
 En **Cuentos y libros** hay tres colecciones:
 
-- **Scalito y sus amigos**, con **Pack Scalito Aventuras a Bs 65**, el Pack Escalito anterior y seis aventuras y actividades de Escalito.
+- **Scalito y sus amigos**, con **Pack Scalito Aventuras a Bs 40**, el Pack Escalito anterior y seis aventuras y actividades de Escalito.
 - **Historia de la Biblia**, con **La Biblia**.
 - **Reflexión en la vida**, con **VideoCuento de reflexión**.
 
@@ -12,21 +12,21 @@ En **Cuentos y libros** hay tres colecciones:
 
 **Pack Scalito Aventuras** conserva su tarjeta grande como producto destacado (`featured: true`). Los diez productos anteriores se muestran en tarjetas pequeñas, en una cuadrícula de tres columnas en escritorio, dos en pantallas medianas y una en móviles estrechos. Las portadas compactas conservan su encuadre y usan una variante de 400 píxeles cuando corresponde.
 
-Se recuperaron diez productos de la tienda anterior, con sus descripciones y ocho enlaces de compra originales. El registro de los importes originales queda como historial en [docs/catalogo-recuperado.md](docs/catalogo-recuperado.md). Los precios actuales son nuevas tarifas en bolivianos (BOB): los individuales van de Bs 20 a Bs 40 y ambos packs cuestan Bs 65; no son una conversión de moneda. La escala distingue actividades, lecturas, materiales educativos y formatos audiovisuales. Los dos packs comparten nivel y quedan por encima de cualquier producto individual.
+Se recuperaron diez productos de la tienda anterior, con sus descripciones y ocho enlaces de compra originales. El registro de los importes originales queda como historial en [docs/catalogo-recuperado.md](docs/catalogo-recuperado.md). Los precios actuales son nuevas tarifas en bolivianos (BOB), solo en múltiplos de Bs 10: los individuales cuestan Bs 10, Bs 20 o Bs 30 y ambos packs cuestan Bs 40. La escala distingue actividades, lecturas, materiales educativos y formatos audiovisuales. Los dos packs comparten nivel y quedan por encima de cualquier producto individual.
 
 | Producto | Precio actual |
 | --- | --- |
-| Pack Scalito Aventuras | Bs 65 |
-| Pack Escalito | Bs 65 |
-| Escalito Inventor | Bs 30 |
-| Escalito Viaje en el Tiempo | Bs 35 |
-| Escalito y el Versículo del Día | Bs 25 |
-| Escalito y la Palabra de Dios | Bs 30 |
-| Escalito y las Aventuras de la Fe | Bs 40 |
-| Escalito y sus Retos Bíblicos | Bs 20 |
-| La Biblia | Bs 35 |
-| VideoCuento de reflexión | Bs 40 |
-| Melodías para Dormir, Aprender y Amar a Dios | Bs 35 |
+| Pack Scalito Aventuras | Bs 40 |
+| Pack Escalito | Bs 40 |
+| Escalito Inventor | Bs 20 |
+| Escalito Viaje en el Tiempo | Bs 30 |
+| Escalito y el Versículo del Día | Bs 20 |
+| Escalito y la Palabra de Dios | Bs 20 |
+| Escalito y las Aventuras de la Fe | Bs 30 |
+| Escalito y sus Retos Bíblicos | Bs 10 |
+| La Biblia | Bs 30 |
+| VideoCuento de reflexión | Bs 30 |
+| Melodías para Dormir, Aprender y Amar a Dios | Bs 30 |
 
 Los ocho destinos anteriores de Hotmart todavía muestran importes con `$`. Sus enlaces permanecen guardados, con `checkoutPricePending: true`, y las tarjetas indican «Nuevo precio próximamente». Para reactivar cada compra, configurar una oferta que cobre el importe anunciado, actualizar `purchaseUrl` con su enlace HTTPS y quitar `checkoutPricePending` o cambiarlo a `false`. El cambio de este repositorio no cambia las ofertas de Hotmart. La Biblia, Melodías y el pack nuevo conservan su aviso de compra próxima hasta recibir sus enlaces oficiales.
 
