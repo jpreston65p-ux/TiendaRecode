@@ -123,7 +123,8 @@
     price.append(node('span', 'price-currency', bolivianos ? 'Bs' : '$'), node('span', 'price-value', amount));
     copy.append(price);
     if (bolivianos) copy.append(node('span', 'price-note', 'Precio en bolivianos'));
-    const url = purchaseUrl(product.purchaseUrl);
+    const pricePending = product.checkoutPricePending === true;
+    const url = pricePending ? null : purchaseUrl(product.purchaseUrl);
     if (url) {
       const buy = node('a', 'product-buy', product.purchaseLabel || 'Comprar ahora');
       buy.href = url;
@@ -131,10 +132,12 @@
       buy.append(arrow());
       copy.append(buy);
     } else {
-      const unavailable = node('button', 'product-buy', 'Compra disponible pronto');
+      const unavailable = node('button', 'product-buy', pricePending ? 'Nuevo precio próximamente' : 'Compra disponible pronto');
       unavailable.type = 'button';
       unavailable.disabled = true;
-      const note = node('p', 'purchase-note', 'El enlace de compra estará disponible próximamente.');
+      const note = node('p', 'purchase-note', pricePending
+        ? 'Estamos actualizando la compra para ofrecerte este precio en bolivianos.'
+        : 'El enlace de compra estará disponible próximamente.');
       note.id = `purchase-note-${product.id}`;
       unavailable.setAttribute('aria-describedby', note.id);
       copy.append(unavailable, note);

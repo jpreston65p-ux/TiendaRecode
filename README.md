@@ -12,7 +12,23 @@ En **Cuentos y libros** hay tres colecciones:
 
 **Pack Scalito Aventuras** conserva su tarjeta grande como producto destacado (`featured: true`). Los diez productos anteriores se muestran en tarjetas pequeñas, en una cuadrícula de tres columnas en escritorio, dos en pantallas medianas y una en móviles estrechos. Las portadas compactas conservan su encuadre y usan una variante de 400 píxeles cuando corresponde.
 
-Se recuperaron diez productos de la tienda anterior, con sus portadas, descripciones, precios y ocho enlaces de compra originales. La Biblia y Melodías conservan el aviso de compra próxima porque no tenían enlace. Los importes anteriores mantienen el símbolo `$`, sin convertirlos a bolivianos ni atribuirles una moneda que el original no especificaba. El detalle de la recuperación está en [docs/catalogo-recuperado.md](docs/catalogo-recuperado.md).
+Se recuperaron diez productos de la tienda anterior, con sus descripciones y ocho enlaces de compra originales. El registro de los importes originales queda como historial en [docs/catalogo-recuperado.md](docs/catalogo-recuperado.md). Los precios actuales son nuevas tarifas en bolivianos (BOB), entre Bs 10 y Bs 30; no son una conversión de moneda.
+
+| Producto | Precio actual |
+| --- | --- |
+| Pack Scalito Aventuras | Bs 30 |
+| Pack Escalito | Bs 25 |
+| Escalito Inventor | Bs 18 |
+| Escalito Viaje en el Tiempo | Bs 18 |
+| Escalito y el Versículo del Día | Bs 12 |
+| Escalito y la Palabra de Dios | Bs 15 |
+| Escalito y las Aventuras de la Fe | Bs 20 |
+| Escalito y sus Retos Bíblicos | Bs 10 |
+| La Biblia | Bs 15 |
+| VideoCuento de reflexión | Bs 18 |
+| Melodías para Dormir, Aprender y Amar a Dios | Bs 15 |
+
+Los ocho destinos anteriores de Hotmart todavía muestran importes con `$`. Sus enlaces permanecen guardados, con `checkoutPricePending: true`, y las tarjetas indican «Nuevo precio próximamente». Para reactivar cada compra, configurar una oferta que cobre el importe anunciado, actualizar `purchaseUrl` con su enlace HTTPS y quitar `checkoutPricePending` o cambiarlo a `false`. El cambio de este repositorio no cambia las ofertas de Hotmart. La Biblia, Melodías y el pack nuevo conservan su aviso de compra próxima hasta recibir sus enlaces oficiales.
 
 Para habilitar la compra del pack, editar `purchaseUrl` en `assets/catalog.js` y reemplazar `null` por el enlace HTTPS oficial entre comillas. La tarjeta se convierte automáticamente en un enlace de compra. Mientras tanto, el botón permanece desactivado y comunica que la compra estará disponible pronto.
 
