@@ -12,20 +12,20 @@ En **Cuentos y libros** hay tres colecciones:
 
 **Pack Scalito Aventuras** conserva su tarjeta grande como producto destacado (`featured: true`). Los diez productos anteriores se muestran en tarjetas pequeñas, en una cuadrícula de tres columnas en escritorio, dos en pantallas medianas y una en móviles estrechos. Las portadas compactas conservan su encuadre y usan una variante de 400 píxeles cuando corresponde.
 
-Se recuperaron diez productos de la tienda anterior, con sus descripciones y ocho enlaces de compra originales. El registro de los importes originales queda como historial en [docs/catalogo-recuperado.md](docs/catalogo-recuperado.md). Los precios actuales están en bolivianos (BOB) y terminan en 9: los individuales cuestan Bs 9, Bs 19 o Bs 29 y ambos packs cuestan Bs 39. Cada tarifa se redujo en Bs 1 respecto a la escala anterior. Los dos packs comparten nivel y quedan por encima de cualquier producto individual.
+Se recuperaron diez productos de la tienda anterior, con sus descripciones y ocho enlaces de compra originales. El registro de los importes originales queda como historial en [docs/catalogo-recuperado.md](docs/catalogo-recuperado.md). Los precios están en bolivianos (BOB). Los productos con enlace de Hotmart cuestan Bs 49, que es lo que cobra Hotmart al pagar (US$ 3,90, el precio mínimo de Hotmart). Los que aún no tienen enlace conservan su precio provisional.
 
 | Producto | Precio actual |
 | --- | --- |
 | Pack Scalito Aventuras | Bs 39 |
 | Pack Escalito | Bs 39 |
-| Escalito Inventor | Bs 19 |
-| Escalito Viaje en el Tiempo | Bs 29 |
-| Escalito y el Versículo del Día | Bs 19 |
-| Escalito y la Palabra de Dios | Bs 19 |
-| Escalito y las Aventuras de la Fe | Bs 29 |
-| Escalito y sus Retos Bíblicos | Bs 9 |
+| Escalito Inventor | Bs 49 |
+| Escalito Viaje en el Tiempo | Bs 49 |
+| Escalito y el Versículo del Día | Bs 49 |
+| Escalito y la Palabra de Dios | Bs 49 |
+| Escalito y las Aventuras de la Fe | Bs 49 |
+| Escalito y sus Retos Bíblicos | Bs 49 |
 | La Biblia | Bs 29 |
-| VideoCuento de reflexión | Bs 29 |
+| VideoCuento de reflexión | Bs 49 |
 | Melodías para Dormir, Aprender y Amar a Dios | Bs 29 |
 
 Los ocho enlaces originales de Hotmart están activos mediante «Comprar ahora», por indicación del propietario. Se retiraron el aviso «Nuevo precio próximamente» y su mensaje de actualización. Los precios del catálogo permanecen en bolivianos; los importes del proveedor de pagos se administran por separado. La Biblia, Melodías y el pack nuevo conservan su aviso de compra próxima hasta recibir sus enlaces oficiales.
