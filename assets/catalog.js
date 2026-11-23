@@ -31,9 +31,9 @@ window.SCALA_CATALOG = Object.freeze({
           }),
           Object.freeze({
             "id": "pack-escalito",
-            "title": "Pack Escalito",
-            "description": "Aventuras con Escalito y sus amigos. Historias bíblicas, canciones y actividades.",
-            "price": 39,
+            "title": "Mega Pack Escalito",
+            "description": "Los 6 cuentos de Escalito en un solo pack, por el precio de 2: aventuras, versículos, retos bíblicos y actividades.",
+            "price": 99,
             "purchaseUrl": "https://pay.hotmart.com/A106042445O",
             "cover": "pack-escalito-scalito-original-v4",
             "coverAlt": "Scalito original guiñando un ojo junto a un cofre de actividades, con un cohete de juguete.",
