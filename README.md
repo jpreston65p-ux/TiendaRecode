@@ -17,7 +17,7 @@ Se recuperaron diez productos de la tienda anterior, con sus descripciones y och
 | Producto | Precio actual |
 | --- | --- |
 | Pack Scalito Aventuras | Bs 39 |
-| Pack Escalito | Bs 39 |
+| Mega Pack Escalito (los 6 cuentos) | Bs 99 |
 | Escalito Inventor | Bs 49 |
 | Escalito Viaje en el Tiempo | Bs 49 |
 | Escalito y el Versículo del Día | Bs 49 |
